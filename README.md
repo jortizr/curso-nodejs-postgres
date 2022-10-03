@@ -1,0 +1,2 @@
+dependencias iniciales
+npm install
