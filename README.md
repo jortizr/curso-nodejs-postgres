@@ -1,5 +1,8 @@
 dependencias iniciales:
 npm install
+npm i express
+npm i @hapi/boom
+npm i joi
 
 npm i nodemon eslint eslint-config-prettier eslint-plugin-prettier prettier -D
 
