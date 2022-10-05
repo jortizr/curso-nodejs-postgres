@@ -28,4 +28,4 @@ function boomErrorHandler(err, req, res, next) {
 }
 
 
-module.exports = { logErrors, errorHandler, boomErrorHandler, sequelizeErrorHandler}
+module.exports = { logErrors, errorHandler, boomErrorHandler, ormErrorHandler}
