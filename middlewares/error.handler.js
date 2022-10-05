@@ -1,21 +1,15 @@
-const {uniqueError} = require("sequelize")
-
+const { ValidationError } = require("sequelize");
+const boom = require('@hapi/boom');
 function logErrors(err, req, res, next) {
   console.error(err);
   next(err);
 }
 
-function uniqueDateErrorHandler(err, req, res, next) {
-  res.status(409).json({
-    message: err
-  });
-  // if (err instanceof uniqueError.) {
-  //   res.status(409).json({
-  //     message: "correo duplicado",
-  //     stack: err.stack
-  //   })
-  // }
-  //next(err);
+function sequelizeErrorHandler(err, req, res, next) {
+  if (err instanceof ValidationError) {
+    throw boom.conflict(err.errors[0].message);
+  }
+  next(err);
 }
 
 function errorHandler(err, req, res, next) {
@@ -34,4 +28,4 @@ function boomErrorHandler(err, req, res, next) {
 }
 
 
-module.exports = { logErrors, errorHandler, boomErrorHandler, uniqueDateErrorHandler}
+module.exports = { logErrors, errorHandler, boomErrorHandler, sequelizeErrorHandler}
