@@ -5,7 +5,7 @@ function logErrors(err, req, res, next) {
   next(err);
 }
 
-function sequelizeErrorHandler(err, req, res, next) {
+function ormErrorHandler(err, req, res, next) {
   if (err instanceof ValidationError) {
     throw boom.conflict(err.errors[0].message);
   }
