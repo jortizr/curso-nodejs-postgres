@@ -19,3 +19,6 @@ npm i --save mysql2
 npm i --save mariadb
 npm i --save sqlite3
 npm i --save tedious # Microsoft SQL Server
+
+dependencia para migraciones con sequelize en dev
+npm i sequelize-cli --save-dev
