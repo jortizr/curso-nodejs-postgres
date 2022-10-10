@@ -34,9 +34,11 @@ router.post('/',
   async (req, res, next) => {
     try {
       const body = req.body;
+
       const newCategory = await service.create(body);
       res.status(201).json(newCategory);
     } catch (error) {
+      console.log("estoy en category.schemas");
       next(error);
     }
   }

@@ -11,8 +11,8 @@ function setupModels(sequelize) {
   Customer.init(CustomerSchema, Customer.config(sequelize));
 
   //agregamos la inicializacion de los modelos
-  Product.init(ProductSchema, Product.config(sequelize));
   Category.init(CategorySchema, Category.config(sequelize));
+  Product.init(ProductSchema, Product.config(sequelize));
 
   User.associate(sequelize.models);
   Customer.associate(sequelize.models);

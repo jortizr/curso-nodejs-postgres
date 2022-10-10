@@ -1,5 +1,6 @@
-const { ValidationError, ForeignKeyConstraintError } = require("sequelize");
+const { ValidationError, ForeignKeyConstraintError, DatabaseError } = require("sequelize");
 const boom = require('@hapi/boom');
+const { response } = require("express");
 function logErrors(err, req, res, next) {
   console.error(err);
   next(err);
@@ -13,17 +14,16 @@ function ormErrorHandler(err, req, res, next) {
   if (err instanceof ForeignKeyConstraintError ) {
     throw boom.notAcceptable(err);
   }
-
+  if (err instanceof DatabaseError) {
+    res.json({err});
+  }
 
   next(err);
 }
 
 function errorHandler(err, req, res, next) {
-
   res.status(500).json({
-    message: err.message,
-    contenido: err
-    //stack: err.stack,
+    message: err
   });
 }
 
