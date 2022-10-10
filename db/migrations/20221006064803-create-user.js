@@ -9,6 +9,6 @@ module.exports = {
   },
 
   async down (queryInterface) {
-    await queryInterface.drop(USER_TABLE, UserSchema);
+    await queryInterface.drop(USER_TABLE);
   }
 };
