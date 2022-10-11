@@ -11,14 +11,14 @@ class CategoryService {
   }
 
   async find() {
-    const categories = await models.Category.findAll({
-      include: ["product"]
-    });
+    const categories = await models.Category.findAll();
     return categories;
   }
 
   async findOne(id) {
-    const category = await models.Category.findByPk(id);
+    const category = await models.Category.findByPk(id, {
+      include: ["products"]
+    } );
     if (!category) {
       throw boom.notFound('user not found');
     }
