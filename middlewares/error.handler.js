@@ -1,6 +1,5 @@
 const { ValidationError, ForeignKeyConstraintError, DatabaseError } = require("sequelize");
 const boom = require('@hapi/boom');
-const { response } = require("express");
 function logErrors(err, req, res, next) {
   console.error(err);
   next(err);

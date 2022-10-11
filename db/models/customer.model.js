@@ -46,7 +46,12 @@ const CustomerSchema = {
 class Customer extends Model{
   static associate(models) {
     //le pasamos el modelo y un sobrenombre
-    this.belongsTo(models.User, {as: "user"})
+    this.belongsTo(models.User, { as: "user" })
+    //detalles de las ordenes que tiene el customer
+    this.hasMany(models.Order, {
+      as: "orders",
+      foreignKey:"customerId"//definimos la fk para buscar su valor en la tabla
+    })
   }
 //usamos la conexion que es sequelize
   static config(sequelize) {
