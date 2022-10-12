@@ -1,19 +1,36 @@
 const boom = require('@hapi/boom');
 
+const {models} = require("../libs/sequelize")
 class OrderService {
 
   constructor(){
   }
   async create(data) {
-    return data;
+    const newOrder = await models.Order.create(data);
+    return newOrder;
   }
 
   async find() {
-    return [];
+    const orders = await models.Order.findAll();
+    return orders;
   }
 
   async findOne(id) {
-    return { id };
+    const orderId = await models.Order.findByPk(id, {
+      include: [
+        {
+          association: "customer",
+          include: ["user"]
+        }
+      ]
+    });
+    if (!orderId) {
+      throw boom.notFound('product not found');
+    }
+    if (orderId.isBlock) {
+      throw boom.conflict('product is block');
+    }
+    return orderId;
   }
 
   async update(id, changes) {

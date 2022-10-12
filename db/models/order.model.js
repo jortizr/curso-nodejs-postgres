@@ -9,8 +9,14 @@ const OrderSchema = {
     primaryKey: true,
     type: DataTypes.INTEGER,
   },
+  createdAt: {
+    allowNull: false,
+    type: DataTypes.DATE,
+    field: "create_at",
+    defaultValue: Sequelize.NOW
+  },
   customerId: {
-    field: 'costumer_id',
+    field: 'customer_id',
     allowNull: false,
     type: DataTypes.INTEGER,
     references: {
@@ -19,19 +25,13 @@ const OrderSchema = {
     },
     onUpdate: 'CASCADE',
     onDelete: 'SET NULL'
-  },
-  createdAt: {
-    allowNull: false,
-    type: DataTypes.DATE,
-    field: "create_at",
-    defaultValue: Sequelize.NOW
   }
 };
 class Order extends Model {
   static associate(models) {
-    this.belongsTo(models.Costumer,//una orden pertenezca a muchos clientes
+    this.belongsTo(models.Customer,
       {
-        as: 'costumer'
+        as: 'customer'
       });
   }
   static config(sequelize) {
