@@ -1,0 +1,26 @@
+_id: req_aee6cd6e51a942c5831bd63381a3b5e0
+type: Request
+parentId: fld_1ce183e26cc64804821fccc1b8e9a8fc
+modified: 1665606578956
+created: 1665605780832
+url: localhost:3000/api/v1/orders
+name: Get order
+description: ""
+method: GET
+body:
+  mimeType: application/json
+  text: ""
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_c52fe6499248404a88787af17012e1c8
+authentication: {}
+metaSortKey: -1663782015548
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

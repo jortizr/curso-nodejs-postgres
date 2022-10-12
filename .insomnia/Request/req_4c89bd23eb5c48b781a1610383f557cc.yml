@@ -1,0 +1,31 @@
+_id: req_4c89bd23eb5c48b781a1610383f557cc
+type: Request
+parentId: wrk_7ae67a51293440f0a20ef55eeef186cf
+modified: 1663445253111
+created: 1662756701598
+url: localhost:3000/message
+name: message
+description: ""
+method: GET
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"chat": "6324f07fe9adb455cd3c057d" ,
+    	"user": "6324ecbe85b16012a0aebe3e",
+    	"message": "And: bien gracias"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_3315c3053dba47cda0fb46ec8ac898ee
+authentication: {}
+metaSortKey: -1662756701598
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

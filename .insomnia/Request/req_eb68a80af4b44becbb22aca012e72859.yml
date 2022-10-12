@@ -1,0 +1,48 @@
+_id: req_eb68a80af4b44becbb22aca012e72859
+type: Request
+parentId: wrk_7ae67a51293440f0a20ef55eeef186cf
+modified: 1663445260843
+created: 1663366285064
+url: localhost:3000/message
+name: message file
+description: ""
+method: POST
+body:
+  mimeType: multipart/form-data
+  params:
+    - id: pair_51c0ed8636294f0eb000975842d9fb88
+      name: file
+      value: ""
+      description: ""
+      type: file
+      fileName: D:\Pictures\meme.png
+    - id: pair_bfbacfc4f3a34f7f891bb59dda9a7700
+      name: user
+      value: 6324ecb485b16012a0aebe3c
+      description: ""
+    - id: pair_db5c6abcb92445839cf590f88646167b
+      name: chat
+      value: 6324f07fe9adb455cd3c057d
+      description: ""
+    - id: pair_c7f7b735dbd84f86baa2c7ec3936372b
+      name: message
+      value: aqui esta el archivo 2
+      description: ""
+    - id: pair_2d7e859aa02c47fabb92e9f28778ad84
+      name: ""
+      value: ""
+      description: ""
+parameters: []
+headers:
+  - name: Content-Type
+    value: multipart/form-data
+    id: pair_c1635e85d0f746f9a9d6adb032e305fb
+authentication: {}
+metaSortKey: -1663366285064
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

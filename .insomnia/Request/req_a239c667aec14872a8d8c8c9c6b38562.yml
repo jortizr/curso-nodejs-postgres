@@ -1,0 +1,31 @@
+_id: req_a239c667aec14872a8d8c8c9c6b38562
+type: Request
+parentId: fld_1ce183e26cc64804821fccc1b8e9a8fc
+modified: 1665605851365
+created: 1664825819156
+url: localhost:3000/api/v1/users
+name: create users
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"email": "jortizr45@ut.edu.co",
+    	"password": "521635jeffer",
+    	"role": "customer"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_a04cdf52e4514b2bbd538b07a56c419c
+authentication: {}
+metaSortKey: -1663878391767.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,31 @@
+_id: req_8e57f5d0fefb431aa8abf81ae05d67b8
+type: Request
+parentId: wrk_7ae67a51293440f0a20ef55eeef186cf
+modified: 1663366245657
+created: 1663358416350
+url: localhost:3000/message?chat=6324f07fe9adb455cd3c057d
+name: chats
+description: ""
+method: GET
+body:
+  mimeType: multipart/form-data
+  params:
+    - id: pair_5c4fc657cf4745878422916e89324047
+      name: ""
+      value: ""
+      description: ""
+      type: file
+parameters: []
+headers:
+  - name: Content-Type
+    value: multipart/form-data
+    id: pair_a0d6e6cea6b343d8913d0459674e7e6c
+authentication: {}
+metaSortKey: -1663358416350
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

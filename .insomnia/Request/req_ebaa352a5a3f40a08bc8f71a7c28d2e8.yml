@@ -1,0 +1,35 @@
+_id: req_ebaa352a5a3f40a08bc8f71a7c28d2e8
+type: Request
+parentId: fld_1ce183e26cc64804821fccc1b8e9a8fc
+modified: 1665372520758
+created: 1665371898353
+url: localhost:3000/api/v1/customers
+name: create customer-user
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"name": "Yeral",
+    	"lastName": "rodriguez",
+    	"phone":"12352542",
+    	"user":{
+    		"email": "prueba2@gmail.com",
+    		"password": "prueba123"
+    	}
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_a04cdf52e4514b2bbd538b07a56c419c
+authentication: {}
+metaSortKey: -1663878062955.875
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

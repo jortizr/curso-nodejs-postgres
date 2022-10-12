@@ -1,0 +1,30 @@
+_id: req_adc5a40a1cf5448d93ae74fff99a4dca
+type: Request
+parentId: fld_1ce183e26cc64804821fccc1b8e9a8fc
+modified: 1665441774513
+created: 1665380649074
+url: localhost:3000/api/v1/categories
+name: create category
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"name": "Categoria 1",
+    	"image": "http://placeimg.com/640/480"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_a04cdf52e4514b2bbd538b07a56c419c
+authentication: {}
+metaSortKey: -1663878117757.8125
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

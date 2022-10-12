@@ -1,0 +1,29 @@
+_id: req_7fc1b1de20cc492a86ba52948d6f857c
+type: Request
+parentId: fld_1ce183e26cc64804821fccc1b8e9a8fc
+modified: 1664833206817
+created: 1664826841912
+url: localhost:3000/api/v1/users/55
+name: Update userID
+description: ""
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"email": "anderw3553@gmail.com"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_08ce1a3222b240b194f5de58f998315d
+authentication: {}
+metaSortKey: -1663879154061
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

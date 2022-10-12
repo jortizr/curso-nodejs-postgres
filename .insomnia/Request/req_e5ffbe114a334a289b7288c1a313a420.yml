@@ -1,0 +1,26 @@
+_id: req_e5ffbe114a334a289b7288c1a313a420
+type: Request
+parentId: fld_1ce183e26cc64804821fccc1b8e9a8fc
+modified: 1665353152012
+created: 1665353126886
+url: localhost:3000/api/v1/customers
+name: Get customer
+description: ""
+method: GET
+body:
+  mimeType: application/json
+  text: ""
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_c52fe6499248404a88787af17012e1c8
+authentication: {}
+metaSortKey: -1663494202136
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

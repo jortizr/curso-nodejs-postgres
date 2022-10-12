@@ -1,0 +1,29 @@
+_id: req_bb6ca54e384c4237b8816c300eaf5d51
+type: Request
+parentId: wrk_7ae67a51293440f0a20ef55eeef186cf
+modified: 1663445252000
+created: 1663358367613
+url: localhost:3000/user
+name: users
+description: ""
+method: GET
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"name": "Anderson"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_9a1ed5eff437438280fadd95e7f4e5bc
+authentication: {}
+metaSortKey: -1663358367613
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

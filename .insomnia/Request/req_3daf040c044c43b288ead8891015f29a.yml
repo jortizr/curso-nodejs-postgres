@@ -1,0 +1,31 @@
+_id: req_3daf040c044c43b288ead8891015f29a
+type: Request
+parentId: fld_1ce183e26cc64804821fccc1b8e9a8fc
+modified: 1665614245248
+created: 1665614041474
+url: localhost:3000/api/v1/orders/add-item
+name: add item a order
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"orderId": 1,
+    	"productId": 1,
+    	"amount": 3
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_a04cdf52e4514b2bbd538b07a56c419c
+authentication: {}
+metaSortKey: -1663878720579.125
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

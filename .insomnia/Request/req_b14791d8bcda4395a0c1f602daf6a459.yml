@@ -1,0 +1,32 @@
+_id: req_b14791d8bcda4395a0c1f602daf6a459
+type: Request
+parentId: fld_1ce183e26cc64804821fccc1b8e9a8fc
+modified: 1665606119703
+created: 1665353104456
+url: localhost:3000/api/v1/customers
+name: create customer
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"name": "Anderson",
+    	"lastName": "ortiz",
+    	"phone":"12352542",
+    	"userId":1
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_a04cdf52e4514b2bbd538b07a56c419c
+authentication: {}
+metaSortKey: -1663878172559.75
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

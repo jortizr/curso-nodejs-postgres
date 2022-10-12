@@ -1,0 +1,33 @@
+_id: req_c350a5d84b4448e0a47bbcad0d03550b
+type: Request
+parentId: fld_1ce183e26cc64804821fccc1b8e9a8fc
+modified: 1665614030919
+created: 1663878830183
+url: localhost:3000/api/v1/products
+name: create product
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"name": "New Produ455",
+    	"description": "este es un nuevo producto",
+    	"price": 12225,
+    	"image": "httt://www.image.com/640/480",
+    	"categoryId":1
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_a04cdf52e4514b2bbd538b07a56c419c
+authentication: {}
+metaSortKey: -1663878830183
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
