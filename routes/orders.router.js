@@ -1,6 +1,6 @@
 const express = require('express');
 const validatorHandler = require("../middlewares/validator.handler")
-const { createOrderSchema, getOrderSchema} = require("../schemas/order.schema")
+const { createOrderSchema, getOrderSchema, addItemSchema} = require("../schemas/order.schema")
 const OrderService = require('./../services/order.service');
 const router = express.Router();
 
@@ -43,5 +43,18 @@ router.post('/',
   }
 );
 
+router.post('/add-item',
+  validatorHandler(addItemSchema, 'body'),
+  async (req, res, next) => {
+    try {
+      const body = req.body;
+      //se debe crear la funcion create para la agregacion de items
+      const newItem = await service.addItem(body);
+      res.status(201).json(newItem);
+    } catch (error) {
+      next(error);
+    }
+  }
+);
 
 module.exports = router;
