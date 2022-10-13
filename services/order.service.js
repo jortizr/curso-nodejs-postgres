@@ -26,9 +26,9 @@ class OrderService {
         {
           association: "customer",
           include: ["user"]
-        },
-        "items"
-      ]
+        }
+        // "items"
+      ] 
     });
     if (!orderId) {
       throw boom.notFound('product not found');
