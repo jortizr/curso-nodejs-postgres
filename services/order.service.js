@@ -25,17 +25,22 @@ class OrderService {
       include: [
         {
           association: "customer",
-          include: ["user"]
-        }
-        // "items"
-      ] 
+          include: ["user"],
+
+        },"items"
+        // {
+        //   association: "OrderProduct",
+        //   include: ["items"]
+        // }
+
+      ]
     });
-    if (!orderId) {
-      throw boom.notFound('product not found');
-    }
-    if (orderId.isBlock) {
-      throw boom.conflict('product is block');
-    }
+    // if (!orderId) { //por esto genera el error
+    //   throw boom.notFound('product not found');
+    // }
+    // if (orderId.isBlock) {
+    //   throw boom.conflict('product is block');
+    // }
     return orderId;
   }
 

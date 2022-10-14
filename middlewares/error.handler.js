@@ -14,7 +14,7 @@ function ormErrorHandler(err, req, res, next) {
     throw boom.notAcceptable(err);
   }
   if (err instanceof DatabaseError) {
-    res.json({err});
+    res.json({message:err.message});
   }
 
   next(err);
@@ -22,7 +22,8 @@ function ormErrorHandler(err, req, res, next) {
 
 function errorHandler(err, req, res, next) {
   res.status(500).json({
-    message: err
+    message: err.message,
+    stack: err.stack
   });
 }
 
