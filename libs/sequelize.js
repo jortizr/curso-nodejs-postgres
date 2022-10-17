@@ -1,16 +1,22 @@
 const { Sequelize } = require("sequelize");
 const { config } = require("../config/config");
 const setupModels = require("../db/models");
+//desde config ya se trae toda la url sin necesidad de hacer un if
 
-
-const USER = encodeURIComponent(config.dbUser);
-const PASSWORD = encodeURIComponent(config.dbPassword);
-const URI = `postgres://${USER}:${PASSWORD}@${config.dbHost}:${config.dbPort}/${config.dbName}`;
-
-const sequelize = new Sequelize(URI, {
+const options = {
   dialect: "postgres",
-  logging: true,
-});
+  logging: config.isProd ? false:true,
+}
+
+if (config.isProd) {
+  options.ssl = {
+    ssl:{//esto si debe correr solo en produccion
+      rejectUnauthorized: false
+    }
+  }
+}
+
+const sequelize = new Sequelize(config.dbUrl, options);
 
 setupModels(sequelize);
 
